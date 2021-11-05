@@ -4,11 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
+
+    ArrayList<RecyclerItem> itemArrayList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +29,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public ArrayList<RecyclerItem> initializeArrayList() {
-        ArrayList<RecyclerItem> itemArrayList = new ArrayList<>();
 
         itemArrayList.add(new RecyclerItem(R.drawable.la_pyets,
                 Util.NAME_OF_PIZZA1, Util.DESCRIPTION_OF_PIZZA1, 187));
@@ -50,5 +52,14 @@ public class MainActivity extends AppCompatActivity {
                 Util.DESCRIPTION_OF_PIZZA10, 187));
 
         return itemArrayList;
+    }
+    public void openPizza(RecyclerItem recyclerItem){
+        Intent pizzaIntent = new Intent(MainActivity.this, PizzaActivity.class);
+        pizzaIntent.putExtra("Name of pizza", recyclerItem.getNameOfPizza());
+        pizzaIntent.putExtra("Description of pizza", recyclerItem.getDescriptionOfPizza());
+        pizzaIntent.putExtra("Price of pizza", recyclerItem.getPriceOfPizza());
+        pizzaIntent.putExtra("Image", recyclerItem.getImageView());
+        startActivity(pizzaIntent);
+
     }
 }

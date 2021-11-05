@@ -4,4 +4,11 @@
     <string name="text1">Text1</string>
     <string name="text2">Text2</string>
     <string name="price">200</string>
+    <string name="imagePizza">ImagePizza</string>
+    <string name="Quantity">Кількість:</string>
+    <string name="button">button</string>
+    <string name="zero">0</string>
+    <string name="one">1</string>
+    <string name="text_price">Ціна:</string>
+    <string name="add_to_cart">Додати в корзину</string>
 </resources>
