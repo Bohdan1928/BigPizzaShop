@@ -15,6 +15,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        RecyclerView recyclerView = findViewById(R.id.recycler_view);
+        recyclerView.setHasFixedSize(true);
+
+        RecyclerView.Adapter adapter = new RecyclerViewAdapter(initializeArrayList());
+        recyclerView.setAdapter(adapter);
+
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(layoutManager);
+    }
+
+    public ArrayList<RecyclerItem> initializeArrayList() {
         ArrayList<RecyclerItem> itemArrayList = new ArrayList<>();
 
         itemArrayList.add(new RecyclerItem(R.drawable.la_pyets,
@@ -38,13 +49,6 @@ public class MainActivity extends AppCompatActivity {
         itemArrayList.add(new RecyclerItem(R.drawable.parma_3, Util.NAME_OF_PIZZA10,
                 Util.DESCRIPTION_OF_PIZZA10, 187));
 
-        RecyclerView recyclerView = findViewById(R.id.recycler_view);
-        recyclerView.setHasFixedSize(true);
-
-        RecyclerView.Adapter adapter = new RecyclerViewAdapter(itemArrayList);
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
-        recyclerView.setAdapter(adapter);
-        recyclerView.setLayoutManager(layoutManager);
-
+        return itemArrayList;
     }
 }

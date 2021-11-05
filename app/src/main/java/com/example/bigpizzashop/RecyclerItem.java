@@ -1,5 +1,7 @@
 package com.example.bigpizzashop;
 
+import androidx.annotation.NonNull;
+
 public class RecyclerItem {
     private int imageView;
     private String nameOfPizza;
@@ -20,34 +22,19 @@ public class RecyclerItem {
         return imageView;
     }
 
-    public void setImageView(int imageView) {
-        this.imageView = imageView;
-    }
-
     public String getNameOfPizza() {
         return nameOfPizza;
-    }
-
-    public void setNameOfPizza(String nameOfPizza) {
-        this.nameOfPizza = nameOfPizza;
     }
 
     public String getDescriptionOfPizza() {
         return descriptionOfPizza;
     }
 
-    public void setDescriptionOfPizza(String descriptionOfPizza) {
-        this.descriptionOfPizza = descriptionOfPizza;
-    }
-
     public int getPriceOfPizza() {
         return priceOfPizza;
     }
 
-    public void setPriceOfPizza(int priceOfPizza) {
-        this.priceOfPizza = priceOfPizza;
-    }
-
+    @NonNull
     @Override
     public String toString() {
         return "RecyclerItem{" +
