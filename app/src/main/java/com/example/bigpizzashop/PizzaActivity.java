@@ -71,7 +71,7 @@ public class PizzaActivity extends AppCompatActivity {
         quantityProteins.setText(proteins + " г");
         quantityCarbohydrates.setText(carbohydrates + " г");
         quantityFats.setText(fats + " г");
-        quantityCaloricContent.setText("" + caloricContent + " ккал");
+        quantityCaloricContent.setText(caloricContent + " ккал");
 
     }
 
