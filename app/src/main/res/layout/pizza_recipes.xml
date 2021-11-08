@@ -12,7 +12,7 @@
         android:layout_height="match_parent">
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/imageViewOnce"
             android:layout_width="105dp"
             android:layout_height="105dp"
             android:contentDescription="@string/pizza"
@@ -21,29 +21,31 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/nameOfPizza"
+            android:id="@+id/nameOfPizzaOnce"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/text1"
             android:textColor="@color/black"
             android:textSize="30sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/imageView"
+            android:layout_marginStart="4dp"
+            app:layout_constraintStart_toEndOf="@+id/imageViewOnce"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/descriptionOfPizza"
+            android:id="@+id/descriptionOfPizzaOnce"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/text2"
             android:textColor="@color/black"
             android:textSize="12sp"
             android:textStyle="italic"
-            app:layout_constraintStart_toEndOf="@+id/imageView"
-            app:layout_constraintTop_toBottomOf="@+id/nameOfPizza" />
+            android:layout_marginStart="6dp"
+            app:layout_constraintStart_toEndOf="@+id/imageViewOnce"
+            app:layout_constraintTop_toBottomOf="@+id/nameOfPizzaOnce" />
 
         <TextView
-            android:id="@+id/priceOfPizza"
+            android:id="@+id/priceOfPizzaOnce"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="12dp"

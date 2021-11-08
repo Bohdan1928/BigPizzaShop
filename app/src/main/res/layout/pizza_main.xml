@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:scrollbars="vertical">
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="420dp"
-        android:layout_height="420dp"
-        android:layout_marginTop="4dp"
+        android:layout_width="330dp"
+        android:layout_height="330dp"
         android:contentDescription="@string/imagePizza"
         android:rotationX="180"
         android:rotationY="180"
@@ -19,12 +17,112 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:id="@+id/proteins"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="@string/proteins"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/quantityProteins"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="@string/proteins"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/proteins" />
+
+    <TextView
+        android:id="@+id/carbohydrates"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/carbohydrates"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/quantityProteins" />
+
+    <TextView
+        android:id="@+id/quantityCarbohydrates"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="@string/carbohydrates"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/carbohydrates" />
+
+    <TextView
+        android:id="@+id/fats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/fats"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/quantityCarbohydrates" />
+
+    <TextView
+        android:id="@+id/quantityFats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="@string/fats"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/fats" />
+
+    <TextView
+        android:id="@+id/CaloricContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/caloric_content"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/quantityFats" />
+
+    <TextView
+        android:id="@+id/quantityCaloricContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="@string/caloric_content"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/CaloricContent" />
+
+    <TextView
         android:id="@+id/nameOfPizza"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/text1"
         android:textColor="@color/black"
-        android:textSize="48sp"
+        android:textSize="42sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,104 +134,129 @@
         android:layout_height="wrap_content"
         android:text="@string/text2"
         android:textColor="@color/black"
-        android:textSize="24sp"
+        android:textSize="18sp"
         android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/nameOfPizza" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
+        android:id="@+id/guidelineVertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.5" />
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
     <TextView
+        android:id="@+id/textPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/text_price"
-        android:textStyle="bold"
         android:textColor="@color/black"
         android:textSize="24sp"
-        app:layout_constraintEnd_toStartOf="@id/guideline"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/quantity"
+        app:layout_constraintEnd_toStartOf="@id/guidelineVertical"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/descriptionOfPizza"
-        app:layout_constraintBottom_toTopOf="@+id/quantity"/>
+        app:layout_constraintTop_toBottomOf="@+id/descriptionOfPizza" />
 
     <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/button"
+        android:text="@string/_200"
+        android:textColor="@color/black"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/buttonAddPizza"
+        app:layout_constraintEnd_toEndOf="@id/guidelineVertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textPrice" />
+
+    <TextView
+        android:id="@+id/textQuantity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/Quantity"
-        android:textStyle="bold"
         android:textColor="@color/black"
         android:textSize="24sp"
-        app:layout_constraintStart_toEndOf="@+id/guideline"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/quantity"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/descriptionOfPizza"
-        app:layout_constraintBottom_toTopOf="@+id/quantity"/>
-
-    <ImageView
-        android:id="@+id/addOfQuantity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="18dp"
-        android:src="@drawable/square"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@id/guideline"
-        app:layout_constraintTop_toBottomOf="@id/descriptionOfPizza"
-        android:contentDescription="@string/button" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="18dp"
-        android:src="@drawable/ic_baseline_add_24"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@id/guideline"
-        app:layout_constraintTop_toBottomOf="@id/descriptionOfPizza"
-        android:contentDescription="@string/button" />
+        app:layout_constraintStart_toEndOf="@+id/guidelineVertical"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionOfPizza" />
 
     <ImageView
         android:id="@+id/removeOfQuantity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="18dp"
+        android:layout_marginStart="18dp"
+        android:contentDescription="@string/button"
         android:src="@drawable/square"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/buttonAddPizza"
+        app:layout_constraintStart_toEndOf="@id/guidelineVertical"
+        app:layout_constraintTop_toBottomOf="@id/textQuantity" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:contentDescription="@string/button"
+        android:src="@drawable/ic_baseline_remove_24"
+        app:layout_constraintBottom_toTopOf="@id/buttonAddPizza"
+        app:layout_constraintStart_toEndOf="@id/guidelineVertical"
+        app:layout_constraintTop_toBottomOf="@id/textQuantity" />
+
+    <ImageView
+        android:id="@+id/addOfQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="18dp"
+        android:contentDescription="@string/button"
+        android:src="@drawable/square"
+        app:layout_constraintBottom_toTopOf="@id/buttonAddPizza"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/descriptionOfPizza"
-        android:contentDescription="@string/button" />
+        app:layout_constraintTop_toBottomOf="@id/textQuantity" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="18dp"
-        android:src="@drawable/ic_baseline_remove_24"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:contentDescription="@string/button"
+        android:src="@drawable/ic_baseline_add_24"
+        app:layout_constraintBottom_toTopOf="@id/buttonAddPizza"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/descriptionOfPizza"
-        android:contentDescription="@string/button" />
+        app:layout_constraintTop_toBottomOf="@id/textQuantity" />
 
     <TextView
         android:id="@+id/quantity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:contentDescription="@string/button"
         android:text="@string/one"
-        android:textSize="48sp"
         android:textColor="@color/black"
+        android:textSize="48sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/addOfQuantity"
-        app:layout_constraintEnd_toStartOf="@+id/removeOfQuantity"
-        app:layout_constraintTop_toBottomOf="@id/descriptionOfPizza"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:contentDescription="@string/button" />
+        app:layout_constraintBottom_toTopOf="@id/buttonAddPizza"
+        app:layout_constraintEnd_toStartOf="@+id/addOfQuantity"
+        app:layout_constraintStart_toEndOf="@+id/removeOfQuantity"
+        app:layout_constraintTop_toBottomOf="@id/textQuantity" />
+
     <Button
+        android:id="@+id/buttonAddPizza"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="@string/add_to_cart"
         android:textColor="@color/black"
         android:textStyle="bold"
-        android:text="@string/add_to_cart"/>
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -11,4 +11,9 @@
     <string name="one">1</string>
     <string name="text_price">Ціна:</string>
     <string name="add_to_cart">Додати в корзину</string>
+    <string name="_200">200</string>
+    <string name="proteins">Білки</string>
+    <string name="carbohydrates">Вуглеводи</string>
+    <string name="fats">Жири</string>
+    <string name="caloric_content">Калорійність</string>
 </resources>
